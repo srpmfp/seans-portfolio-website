@@ -32,7 +32,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     flex-basis: auto;
-    border-bottom: 2px inset hsla(186, 21%, 26%, 1);
+    border-bottom: 2px inset var(--active-color);
 }
 
 .profile-img {
@@ -96,7 +96,7 @@ header ul {
 }
 
 nav {
-    margin: auto 0;
+    margin: var(--y-margin);
 }
 
 /*removing the underline of the link and changing the color*/
@@ -412,8 +412,8 @@ body h1 {
 
     .text-hello {
         background-color: hsla(170, 21%, 26%, .6);
-        color: hsla(97, 13%, 80%, 1);
-        margin: 0 auto;
+        color: var(--primary-color);
+        margin: var(--x-margin);
         max-width: inherit;
         text-align: center;
     }
