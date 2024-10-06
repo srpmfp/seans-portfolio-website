@@ -158,9 +158,19 @@ body table {
     text-align: left;
     border-radius: var(--border-radius);
     z-index: 1;
+    & th {
+    font-family: "coming soon";
+        justify-items: start;
+        text-align: center;
+        background-color: var(--primary-color);
+        border-top: 1px inset whitesmoke;
+        border-right: 5px inset whitesmoke;
+        border-left: 5px inset whitesmoke;
+        border-radius: 20px;
+    }
 }
 
-body table th {
+/* body table th {
     font-family: "coming soon";
     justify-items: start;
     text-align: center;
@@ -169,7 +179,7 @@ body table th {
     border-right: 5px inset whitesmoke;
     border-left: 5px inset whitesmoke;
     border-radius: 20px;
-}
+} */
 
 body table tr td {
     max-width: min-content;
