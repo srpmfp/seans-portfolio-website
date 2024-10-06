@@ -55,17 +55,11 @@ main {
         }
     }
 }
-main 
 
 .text-hello h1 {
     text-align: unset;
 }
-
-main 
-
-main article 
-}
-
+ 
 .profile {
     max-width: 700px;
     margin: 0 auto;
@@ -325,6 +319,9 @@ form button:hover, button:focus {
         transition-duration: 100ms;
         transition-timing-function: ease-in-out;
         transition-delay: 150ms;
+        & a{
+            color:var(--primary-color)
+        }
     }
 }
 

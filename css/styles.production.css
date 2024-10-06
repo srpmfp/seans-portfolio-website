@@ -5,28 +5,12 @@
 * Browsers: last 4 version
 */
 
-:root {
-    --primary-color: hsla(97, 13%, 80%, 1);
-    --active-color: hsla(186, 21%, 26%, 1);
-    --form-color: hsla(210, 3%, 15%, 1);
-    --font-dark: hsla(210, 3%, 15%, 1);
-    --span: hsla(201, 20%, 23%, 1);
-    --form-th: hsla(0, 0%, 100%, .8);
-    --font-size: 400;
-    --border-radius: 10px;
-    --border-circle: 50%;
-    --view-height: 100vh;
-    --x-margin: 0 auto;
-    --y-margin: auto 0;
-
-}
-
 body {
     margin: 0;
     font-family: "noto sans";
-    font-weight: var(--font-size);
-    background-color: var(--primary-color);
-    height: var(--view-height);
+    font-weight: 400;
+    background-color: hsla(97, 13%, 80%, 1);
+    height: 100vh;
     overflow-x: hidden;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -56,7 +40,7 @@ header {
     justify-content: space-between;
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
-    border-bottom: 2px inset var(--active-color);
+    border-bottom: 2px inset hsla(186, 21%, 26%, 1);
 }
 
 .profile-img {
@@ -100,8 +84,8 @@ main {
 }
 
 .text-hello span {
-    background-color: var(--span);
-    color: var(--primary-color);
+    background-color: hsla(201, 20%, 23%, 1);
+    color: hsla(97, 13%, 80%, 1);
     margin: 0 5px;
     padding: 0 5px;
 }
@@ -110,7 +94,7 @@ main {
     float: left;
     width: inherit;
     margin-right: 40px;
-    border-radius: var(--border-circle);
+    border-radius: 50%;
     border: 3px inset hsla(133, 18%, 59%, 1)
 }
 
@@ -129,17 +113,17 @@ header ul {
 }
 
 nav {
-    margin: var(--y-margin);
+    margin: auto 0;
 }
 
 /*removing the underline of the link and changing the color*/
 header nav ul li a {
-    color: var(--span);
+    color: hsla(201, 20%, 23%, 1);
     background-color: transparent;
     text-decoration: none;
     padding: 0;
     margin: 0 10px;
-    border-radius: var(--border-radius);
+    border-radius: 10px;
     -webkit-transition-property: background-color, font-size, color, -webkit-text-decoration;
     transition-property: background-color, font-size, color, -webkit-text-decoration;
     -o-transition-property: background-color, font-size, color, text-decoration;
@@ -163,13 +147,13 @@ header a:hover {
     animation-direction: alternate;
     -webkit-animation-iteration-count: infinite;
     animation-iteration-count: infinite;
-    background-color: var(--active-color);
+    background-color: hsla(186, 21%, 26%, 1);
     color: hsla(133, 18%, 59%, 1);
     text-decoration: underline;
 }
 
 header #menuitem:visited {
-    color: var(--form-color)
+    color: hsla(210, 3%, 15%, 1)
 }
 
 
@@ -201,14 +185,14 @@ body h1 {
 .about_article {
     & table {
         text-align: left;
-        border-radius: var(--border-radius);
+        border-radius: 10px;
         z-index: 1;
 
         & th {
             font-family: "coming soon";
             justify-items: start;
             text-align: center;
-            background-color: var(--primary-color);
+            background-color: hsla(97, 13%, 80%, 1);
             border-top: 1px inset whitesmoke;
             border-right: 5px inset whitesmoke;
             border-left: 5px inset whitesmoke;
@@ -273,7 +257,7 @@ form h1 {
     border-radius: 10px;
     padding-bottom: 20px;
     background-color: hsla(210, 3%, 15%, 1);
-    color: var(--primary-color);
+    color: hsla(97, 13%, 80%, 1);
 }
 
 form input,
@@ -294,9 +278,14 @@ form button {
     border-radius: 10px 10px 10px 10px;
 }
 
-form button:hover,
+form button:hover {
+    background-color: hsla(97, 13%, 80%, 1);
+    cursor: pointer;
+
+}
+
 button:focus {
-    background-color: var(--primary-color);
+    background-color: hsla(97, 13%, 80%, 1);
     cursor: pointer;
 
 }
@@ -319,7 +308,7 @@ button:focus {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: var(--active-color);
+    background-color: hsla(186, 21%, 26%, 1);
     color: white;
     border-radius: 15px;
 }
@@ -377,14 +366,14 @@ button:focus {
 
     .grid_item {
 
-        background-color: var(--active-color);
+        background-color: hsla(186, 21%, 26%, 1);
         max-width: 350px;
         max-height: 105px;
         grid-column: auto/auto;
         grid-row: auto/auto;
         padding: 5px;
         overflow-y: hidden;
-        color: var(--primary-color);
+        color: hsla(97, 13%, 80%, 1);
         -webkit-transition-property: max-height, -webkit-transform;
         transition-property: max-height, -webkit-transform;
         -o-transition-property: max-height, transform;
@@ -399,6 +388,10 @@ button:focus {
         -webkit-transition-delay: 150ms;
         -o-transition-delay: 150ms;
         transition-delay: 150ms;
+
+        & a {
+            color: hsla(97, 13%, 80%, 1)
+        }
     }
 }
 
@@ -552,8 +545,8 @@ body h1 {
 
     .text-hello {
         background-color: hsla(170, 21%, 26%, .6);
-        color: var(--primary-color);
-        margin: var(--x-margin);
+        color: hsla(97, 13%, 80%, 1);
+        margin: 0 auto;
         max-width: inherit;
         text-align: center;
     }
