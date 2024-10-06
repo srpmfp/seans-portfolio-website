@@ -76,22 +76,22 @@ main {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-}
 
-main h1 {
-    text-align: center;
+    & h1 {
+        text-align: center;
+    }
+
+    & article {
+        margin: 0 auto;
+
+        & h2 {
+            text-align: center;
+        }
+    }
 }
 
 .text-hello h1 {
     text-align: unset;
-}
-
-main article {
-    margin: 0 auto;
-}
-
-main article h2 {
-    text-align: center;
 }
 
 .profile {
@@ -198,20 +198,22 @@ body h1 {
     display: inline-block;
 }
 
-body table {
-    text-align: left;
-    border-radius: var(--border-radius);
-    z-index: 1;
+.about_article {
+    & table {
+        text-align: left;
+        border-radius: var(--border-radius);
+        z-index: 1;
 
-    & th {
-        font-family: "coming soon";
-        justify-items: start;
-        text-align: center;
-        background-color: var(--primary-color);
-        border-top: 1px inset whitesmoke;
-        border-right: 5px inset whitesmoke;
-        border-left: 5px inset whitesmoke;
-        border-radius: 20px;
+        & th {
+            font-family: "coming soon";
+            justify-items: start;
+            text-align: center;
+            background-color: var(--primary-color);
+            border-top: 1px inset whitesmoke;
+            border-right: 5px inset whitesmoke;
+            border-left: 5px inset whitesmoke;
+            border-radius: 20px;
+        }
     }
 }
 
