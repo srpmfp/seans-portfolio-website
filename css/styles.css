@@ -1,0 +1,470 @@
+:root{
+    --primary-color:hsla(97, 13%, 80%, 1);
+    --active-color: hsla(186, 21%, 26%, 1);
+    --form-color: hsla(210, 3%, 15%, 1);
+    --font-dark: hsla(210, 3%, 15%, 1);
+    --span: hsla(201, 20%, 23%, 1);
+    --form-th: hsla(0, 0%, 100%, .8) ;
+    --font-size: 400;
+    --border-radius: 10px;
+    --border-circle: 50%;
+    --view-height: 100vh;
+    --x-margin: 0 auto;
+    --y-margin: auto 0;
+
+}
+body {
+    margin: 0;
+    font-family: "noto sans";
+    font-weight: var(--font-size);
+    background-color:var(--primary-color);
+    height: var(--view-height);
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 1.5;
+}
+/* setting header to set horizontally and have its own text styling*/
+header {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-basis: auto;
+    border-bottom: 2px inset hsla(186, 21%, 26%, 1);
+}
+
+.profile-img {
+    width: 150px;
+    max-width: 10%;
+    margin: auto 5%;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main h1 {
+    text-align: center;
+}
+
+.text-hello h1 {
+    text-align: unset;
+}
+
+main article {
+    margin: 0 auto;
+}
+
+main article h2 {
+    text-align: center;
+}
+
+.profile {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.text-hello span {
+    background-color: var(--span);
+    color:var(--primary-color);
+    margin: 0 5px;
+    padding: 0 5px;
+}
+
+.portrait-main {
+    float: left;
+    width: inherit;
+    margin-right: 40px;
+    border-radius: var(--border-circle);
+    border: 3px inset hsla(133, 18%, 59%, 1)
+}
+
+header {
+    font-size: 2em;
+}
+
+header ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+    font-family: "coming soon";
+}
+
+nav {
+    margin: auto 0;
+}
+
+/*removing the underline of the link and changing the color*/
+header nav ul li a {
+    color: var(--span);
+    background-color: transparent;
+    text-decoration: none;
+    padding: 0;
+    margin: 0 10px;
+    border-radius: var(--border-radius);
+    transition-property: background-color, font-size, color, text-decoration;
+    transition-duration: 300ms;
+
+}
+
+header a:hover {
+    font-size: 1.1em;
+    animation-name: colorBounce;
+    animation-duration: 750ms;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    background-color: var(--active-color);
+    color: hsla(133, 18%, 59%, 1);
+    text-decoration: underline;
+}
+
+header #menuitem:visited {
+    color: var(--form-color)
+}
+
+
+
+.profile_info {
+    display: none;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 30vw;
+    right: 30vw;
+}
+
+.profile img {
+    width: 50%;
+    margin: 0 auto;
+}
+
+body h1 {
+    font-family: "coming soon";
+}
+
+.about_article {
+    display: inline-block;
+}
+
+body table {
+    text-align: left;
+    border-radius: var(--border-radius);
+    z-index: 1;
+}
+
+body table th {
+    font-family: "coming soon";
+    justify-items: start;
+    text-align: center;
+    background-color: var(--primary-color);
+    border-top: 1px inset whitesmoke;
+    border-right: 5px inset whitesmoke;
+    border-left: 5px inset whitesmoke;
+    border-radius: 20px;
+}
+
+body table tr td {
+    max-width: min-content;
+    text-align: center;
+    padding:5px;
+    background-color: rgba(73, 73, 75, 0.9);
+    max-width: 400px;
+    color: hsla(97, 13%, 80%, 1);
+    border-radius: 20px;
+}
+
+#hometown {
+    position: fixed;
+    left: 10%;
+    Right: 10%;
+    bottom: 1%;
+    width: 50vw;
+    min-width: 1000px;
+    z-index: -1;
+}
+
+form {
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
+    width: 50vw;
+    background-color: rgba(0, 0, 0, 0.253);
+    border: 2px dotted hsla(340, 100%, 99%, 1);
+    border-radius: 10px 10px 10px 10px;
+    padding: 2px 2px 2px 2px
+}
+
+form h1 {
+    text-align: center;
+    padding-top: 0;
+    margin: 0;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: hsla(210, 3%, 15%, 1);
+    color: var(--primary-color);
+}
+
+form input, textarea, button {
+    background-color: hsla(210, 3%, 15%, .1);
+    padding: 5px 5px 5px 5px
+}
+
+form textarea {
+    width: auto;
+}
+
+form button {
+    font-family: "coming soon";
+    font-size: 20px;
+    font-stretch: expanded;
+    border-radius: 10px 10px 10px 10px;
+}
+
+form button:hover, button:focus {
+    background-color: var(--primary-color);
+    cursor: pointer;
+
+}
+
+#contactlinks {
+    text-align: center;
+}
+
+.social-icn {
+    width: 80px;
+}
+
+.page-footer {
+    clear: both;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    background-color: var(--active-color);
+    color: white;
+    border-radius: 15px;
+}
+
+.page-footer h2 {
+    margin: 0;
+
+}
+
+.main-grid {
+    width: 75%;
+    margin: 0 auto;
+}
+
+.grid_item {
+    display: inline-block;
+    width: 50%;
+    color: white;
+}
+
+
+@supports(display: grid) {
+    @media all and (max-width: 275px) {
+
+        .work-grid {
+            max-width: fit-content;
+            grid-template-columns: 1fr;
+            grid-column-start: auto;
+        }
+
+    }
+
+    @media all and (min-width: 400px) and (max-width:600px) {
+
+        .work-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+
+    }
+
+    @media all and (max-width: 600px) {
+
+        .work-grid {
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+
+
+    }
+
+    .grid_item {
+
+        background-color:var(--active-color);
+        max-width: 350px;
+        max-height: 105px;
+        grid-column: auto/auto;
+        grid-row: auto/auto;
+        padding: 5px;
+        overflow-y: hidden;
+        color: var(--primary-color);
+        transition-property: max-height, transform;
+        transition-duration: 100ms;
+        transition-timing-function: ease-in-out;
+        transition-delay: 150ms;
+    }
+}
+
+.grid_item:hover {
+    animation-name: colorBounce;
+    animation-duration: 1000ms;
+    animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    height: 200px;
+    overflow-y: scroll;
+    max-height: 275px;
+    transform: scale(1.1);
+}
+
+.grid_item:hover {
+    animation-name: focusZ;
+    animation-duration: 300ms;
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes focusZ {
+    from {
+        transform: translateZ(0);
+    }
+
+    to {
+        transform: translateZ(100px);
+    }
+
+}
+
+body h1 {
+    font-size: 3em;
+}
+
+@keyframes colorBounce {
+    0% {
+        background-color: hsla(180, 21%, 26%, 1);
+    }
+
+    50% {
+        background-color: hsla(195, 21%, 26%, 1);
+    }
+
+    100% {
+        background-color: hsla(170, 21%, 26%, 1);
+    }
+
+    50% {
+        background-color: hsla(195, 21%, 26%, 1);
+    }
+
+    0% {
+        background-color: hsla(180, 21%, 26%, 1);
+    }
+}
+
+@media all and (max-width: 950px) {
+
+    body header {
+        font-size: 1.5em;
+    }
+
+    body h2 {
+        font-size: 1em;
+    }
+
+    .portrait-main {
+        min-width: 388px;
+        max-width: inherit;
+        border: 0px;
+    }
+
+    @media all and (max-width: 765px) {
+        body header {
+            font-size: 1.5em;
+        }
+
+        body h2 {
+            font-size: 1em;
+        }
+
+        body header nav a {
+            margin: 0;
+        }
+
+        body main h1 {
+            font-size: 1.5em;
+
+        }
+
+        body header {
+            flex-direction: row;
+        }
+    }
+
+    .text-hello {
+        background-color: hsla(170, 21%, 26%, .6);
+        color: hsla(97, 13%, 80%, 1);
+        margin: 0 auto;
+        max-width: inherit;
+        text-align: center;
+    }
+
+    @media all and (max-width: 675px) {
+        body header {
+            justify-content: center;
+        }
+
+    }
+
+    @media all and (max-width: 575px) {
+
+        .profile-img {
+            max-width: 25%;
+            position: absolute;
+            margin: auto;
+            mask-image: linear-gradient(rgba(0, 0, 0, 0.42), rgba(128, 128, 128, 0.553));
+            z-index: -1;
+        }
+    }
+
+    .portrait-main {
+        position: absolute;
+        z-index: -1;
+    }
+
+}
+
+@media all and (max-width:390px) {
+    body main h1 {
+        font-size: 1em;
+    }
+
+    body header nav ul {
+        padding: 0;
+        margin: 0;
+    }
+
+    body header nav a {
+
+        text-align: center;
+    }
+
+
+}
+
+@media all and (max-width:250px) {
+    body header nav a {
+        font-size: .6em;
+        padding: 1em;
+
+    }
+}

@@ -1,0 +1,40 @@
+$shadow-color:rgba(0, 0, 0, 0.3);
+$bg-color1:  #112055;
+$bg-color2:  #4f9d92;
+$primary-color: #fff;
+$secondary-color: #000;
+
+%box{
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 4px 3px 19px 0px $shadow-color;
+}
+
+.box__wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+    padding: 20px;
+    font-family: sans-serif;
+}
+.box-primary{
+    @extend %box;
+    background-color: $bg-color1;
+    color: $primary-color;
+    &:hover{
+        box-shadow: none;
+    }
+    &-lighter{
+        @extend .box-primary;
+        background-color: Lighten($bg-color1, 20%)
+    }
+    &-darker{
+    @extend .box-primary;
+    background-color: darken($bg-color1,-20%);
+    }
+}
+.box-secondary{
+    @extend .box-primary;
+    background-color: $bg-color2;
+    color: $secondary-color;
+}
