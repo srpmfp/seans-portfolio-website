@@ -32,7 +32,7 @@ header {
     flex-direction: row;
     justify-content: space-between;
     flex-basis: auto;
-    border-bottom: 2px inset var(--active-color);
+    border-bottom: 2px inset hsla(186, 21%, 26%, 1);
 }
 
 .profile-img {
@@ -45,21 +45,24 @@ main {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    & h1 {
-            text-align: center;
-        }
-    & article {
-    margin: 0 auto;
-        & h2 {
-                text-align: center;
-        }
-    }
+}
+
+main h1 {
+    text-align: center;
 }
 
 .text-hello h1 {
     text-align: unset;
 }
- 
+
+main article {
+    margin: 0 auto;
+}
+
+main article h2 {
+    text-align: center;
+}
+
 .profile {
     max-width: 700px;
     margin: 0 auto;
@@ -93,7 +96,7 @@ header ul {
 }
 
 nav {
-    margin: var(--y-margin);
+    margin: auto 0;
 }
 
 /*removing the underline of the link and changing the color*/
@@ -151,24 +154,13 @@ body h1 {
     display: inline-block;
 }
 
-.about_article{
-    & table {
+body table {
     text-align: left;
     border-radius: var(--border-radius);
     z-index: 1;
-    & th {
-    font-family: "coming soon";
-        justify-items: start;
-        text-align: center;
-        background-color: var(--primary-color);
-        border-top: 1px inset whitesmoke;
-        border-right: 5px inset whitesmoke;
-        border-left: 5px inset whitesmoke;
-        border-radius: 20px;
-        }
-    }
 }
-/* body table th {
+
+body table th {
     font-family: "coming soon";
     justify-items: start;
     text-align: center;
@@ -177,7 +169,7 @@ body h1 {
     border-right: 5px inset whitesmoke;
     border-left: 5px inset whitesmoke;
     border-radius: 20px;
-} */
+}
 
 body table tr td {
     max-width: min-content;
@@ -258,6 +250,9 @@ form button:hover, button:focus {
     background-color: var(--active-color);
     color: white;
     border-radius: 15px;
+        & h2{
+
+        }
 }
 
 .page-footer h2 {
@@ -319,9 +314,6 @@ form button:hover, button:focus {
         transition-duration: 100ms;
         transition-timing-function: ease-in-out;
         transition-delay: 150ms;
-        & a{
-            color:var(--primary-color)
-        }
     }
 }
 
@@ -423,8 +415,8 @@ body h1 {
 
     .text-hello {
         background-color: hsla(170, 21%, 26%, .6);
-        color: var(--primary-color);
-        margin: var(--x-margin);
+        color: hsla(97, 13%, 80%, 1);
+        margin: 0 auto;
         max-width: inherit;
         text-align: center;
     }
