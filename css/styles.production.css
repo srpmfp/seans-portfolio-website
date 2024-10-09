@@ -61,21 +61,22 @@ main {
     -ms-flex-direction: column;
     flex-direction: column;
 
-    & h1 {
-        text-align: center;
-    }
+}
 
-    & article {
-        margin: 0 auto;
-
-        & h2 {
-            text-align: center;
-        }
-    }
+main h1 {
+    text-align: center;
 }
 
 .text-hello h1 {
     text-align: unset;
+}
+
+main article {
+    margin: 0 auto;
+}
+
+main article h2 {
+    text-align: center;
 }
 
 .profile {
@@ -162,12 +163,6 @@ header #menuitem:visited {
     display: none;
 }
 
-footer {
-    position: fixed;
-    bottom: 0;
-    left: 30vw;
-    right: 30vw;
-}
 
 .profile img {
     width: 50%;
@@ -182,35 +177,22 @@ body h1 {
     display: inline-block;
 }
 
-.about_article {
-    & table {
-        text-align: left;
-        border-radius: 10px;
-        z-index: 1;
-
-        & th {
-            font-family: "coming soon";
-            justify-items: start;
-            text-align: center;
-            background-color: hsla(97, 13%, 80%, 1);
-            border-top: 1px inset whitesmoke;
-            border-right: 5px inset whitesmoke;
-            border-left: 5px inset whitesmoke;
-            border-radius: 20px;
-        }
-    }
+body table {
+    text-align: left;
+    border-radius: 10px;
+    z-index: 1;
 }
 
-/* body table th {
+body table th {
     font-family: "coming soon";
     justify-items: start;
     text-align: center;
-    background-color: var(--primary-color);
+    background-color: hsla(97, 13%, 80%, 1);
     border-top: 1px inset whitesmoke;
     border-right: 5px inset whitesmoke;
     border-left: 5px inset whitesmoke;
     border-radius: 20px;
-} */
+}
 
 body table tr td {
     max-width: -webkit-min-content;
@@ -300,6 +282,7 @@ button:focus {
 
 .page-footer {
     clear: both;
+    margin: auto 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -311,22 +294,23 @@ button:focus {
     background-color: hsla(186, 21%, 26%, 1);
     color: white;
     border-radius: 15px;
+
+    & h2 {
+        margin: 0
+    }
 }
 
-.page-footer h2 {
-    margin: 0;
 
-}
-
-.main-grid {
-    width: 75%;
-    margin: 0 auto;
-}
 
 .grid_item {
     display: inline-block;
-    width: 50%;
+    width: auto;
+    margin: 0 auto;
     color: white;
+
+    & a {
+        color: hsla(97, 13%, 80%, 1)
+    }
 }
 
 
@@ -368,17 +352,18 @@ button:focus {
 
         background-color: hsla(186, 21%, 26%, 1);
         max-width: 350px;
-        max-height: 105px;
+        max-height: 500px;
+        min-height: 300px;
         grid-column: auto/auto;
         grid-row: auto/auto;
         padding: 5px;
         overflow-y: hidden;
         color: hsla(97, 13%, 80%, 1);
-        -webkit-transition-property: max-height, -webkit-transform;
-        transition-property: max-height, -webkit-transform;
-        -o-transition-property: max-height, transform;
-        transition-property: max-height, transform;
-        transition-property: max-height, transform, -webkit-transform;
+        -webkit-transition-property: -webkit-box-shadow, -webkit-transform;
+        transition-property: -webkit-box-shadow, -webkit-transform;
+        -o-transition-property: box-shadow, transform;
+        transition-property: box-shadow, transform;
+        transition-property: box-shadow, transform, -webkit-box-shadow, -webkit-transform;
         -webkit-transition-duration: 100ms;
         -o-transition-duration: 100ms;
         transition-duration: 100ms;
@@ -388,10 +373,6 @@ button:focus {
         -webkit-transition-delay: 150ms;
         -o-transition-delay: 150ms;
         transition-delay: 150ms;
-
-        & a {
-            color: hsla(97, 13%, 80%, 1)
-        }
     }
 }
 
@@ -406,12 +387,11 @@ button:focus {
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-    height: 200px;
-    overflow-y: scroll;
-    max-height: 275px;
-    -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+    -webkit-box-shadow: inset;
+    box-shadow: inset;
+    -webkit-transform: scale(1.01);
+    -ms-transform: scale(1.01);
+    transform: scale(1.01);
 }
 
 .grid_item:hover {
@@ -454,7 +434,7 @@ button:focus {
 }
 
 body h1 {
-    font-size: 3em;
+    font-size: 1.5em;
 }
 
 @-webkit-keyframes colorBounce {
@@ -504,7 +484,7 @@ body h1 {
 @media all and (max-width: 950px) {
 
     body header {
-        font-size: 1.5em;
+        font-size: 1em;
     }
 
     body h2 {
@@ -519,7 +499,7 @@ body h1 {
 
     @media all and (max-width: 765px) {
         body header {
-            font-size: 1.5em;
+            font-size: 1em;
         }
 
         body h2 {
@@ -531,7 +511,7 @@ body h1 {
         }
 
         body main h1 {
-            font-size: 1.5em;
+            font-size: 1.3em;
 
         }
 
@@ -579,6 +559,14 @@ body h1 {
         z-index: -1;
     }
 
+    footer {
+        position: relative;
+        bottom: 0;
+        left: 30vw;
+        right: 30vw;
+        max-height: 20%;
+        width: 50vw;
+    }
 }
 
 @media all and (max-width:390px) {
@@ -595,7 +583,6 @@ body h1 {
 
         text-align: center;
     }
-
 
 }
 
