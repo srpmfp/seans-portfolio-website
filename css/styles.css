@@ -251,7 +251,9 @@ form button:hover, button:focus {
         }
 }
 
- 
+ .main-grid{
+    margin-left: 15vw;
+ }
 
 .grid_item {
     display: inline-block;
@@ -271,6 +273,7 @@ form button:hover, button:focus {
             max-width: fit-content;
             grid-template-columns: 1fr;
             grid-column-start: auto;
+
         }
 
     }
