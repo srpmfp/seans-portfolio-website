@@ -167,7 +167,6 @@ body table th {
 }
 
 body table tr td {
-    max-width: min-content;
     text-align: center;
     padding:5px;
     background-color: rgba(73, 73, 75, 0.9);
@@ -379,7 +378,7 @@ body h1 {
     }
 
     .portrait-main {
-        min-width: 388px;
+        min-width: 320px;
         max-width: inherit;
         border: 0px;
     }

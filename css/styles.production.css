@@ -153,7 +153,6 @@ body table th {
 }
 
 body table tr td {
-    max-width: min-content;
     text-align: center;
     padding: 5px;
     background-color: rgba(73, 73, 75, 0.9);
