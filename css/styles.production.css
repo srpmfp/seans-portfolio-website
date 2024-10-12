@@ -565,7 +565,7 @@ body h1 {
         top: 40%;
         left: 30vw;
         right: 30vw;
-        max-height: 20%;
+        max-height: fit-content;
         width: 50vw;
     }
 }
