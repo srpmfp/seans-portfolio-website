@@ -13,6 +13,9 @@
     --y-margin: auto 0;
 
 }
+*{
+    box-sizing: border-box;
+}
 body {
     margin: 0;
     font-family: "noto sans";
@@ -24,16 +27,34 @@ body {
     align-items: center;
     justify-content: space-between;
     line-height: 1.5;
+    & h1 {
+    font-family: "coming soon";
+    }
+    & table {
+    text-align: left;
+    border-radius: var(--border-radius);
+    z-index: 1;
+    & th {
+            font-family: "coming soon";
+            justify-items: start;
+            text-align: center;
+            background-color: var(--primary-color);
+            border-top: 1px inset whitesmoke;
+            border-right: 5px inset whitesmoke;
+            border-left: 5px inset whitesmoke;
+            border-radius: 20px;
+        }
+           &  tr td {
+                    text-align: center;
+                    padding: 5px;
+                    background-color: rgba(73, 73, 75, 0.9);
+                    max-width: 400px;
+                    color: hsla(97, 13%, 80%, 1);
+                    border-radius: 20px;
+                }
 }
-/* setting header to set horizontally and have its own text styling*/
-header {
-    display: flex;
-    width: 100vw;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-basis: auto;
-    border-bottom: 2px inset hsla(186, 21%, 26%, 1);
 }
+
 
 .profile-img {
     width: 150px;
@@ -46,24 +67,19 @@ main {
     justify-content: center;
     flex-direction: column;
 
-}
-
-main h1 {
+    & h1 {
     text-align: center;
+    }
+    & article {
+        margin: 0 auto;
+        & h2 {
+            text-align: center;
+        }
+    }
 }
-
 .text-hello h1 {
     text-align: unset;
 }
-
-main article {
-    margin: 0 auto;
-}
-
-main article h2 {
-    text-align: center;
-}
-
 .profile {
     max-width: 700px;
     margin: 0 auto;
@@ -85,33 +101,37 @@ main article h2 {
 }
 
 header {
-    font-size: 2em;
-}
-
-header ul {
     display: flex;
-    list-style-type: none;
-    margin: 0;
-    padding: 10px;
-    font-family: "coming soon";
+        width: 100vw;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-basis: auto;
+        border-bottom: 2px inset hsla(186, 21%, 26%, 1);
+    font-size: 2em;
+    & ul {
+            display: flex;
+            list-style-type: none;
+            margin: 0;
+            padding: 10px;
+            font-family: "coming soon";
+        }
+    & nav ul li a {
+        color: var(--span);
+        background-color: transparent;
+        text-decoration: none;
+        padding: 0;
+        margin: 0 10px;
+        border-radius: var(--border-radius);
+        transition-property: background-color, font-size, color, text-decoration;
+        transition-duration: 300ms;
+    }
 }
 
 nav {
     margin: auto 0;
 }
 
-/*removing the underline of the link and changing the color*/
-header nav ul li a {
-    color: var(--span);
-    background-color: transparent;
-    text-decoration: none;
-    padding: 0;
-    margin: 0 10px;
-    border-radius: var(--border-radius);
-    transition-property: background-color, font-size, color, text-decoration;
-    transition-duration: 300ms;
 
-}
 
 header a:hover {
     font-size: 1.1em;
@@ -135,45 +155,14 @@ header #menuitem:visited {
     display: none;
 }
 
-
+.about_article {
+    display: inline-block;
+}
 .profile img {
     width: 50%;
     margin: 0 auto;
 }
 
-body h1 {
-    font-family: "coming soon";
-}
-
-.about_article {
-    display: inline-block;
-}
-
-body table {
-    text-align: left;
-    border-radius: var(--border-radius);
-    z-index: 1;
-}
-
-body table th {
-    font-family: "coming soon";
-    justify-items: start;
-    text-align: center;
-    background-color: var(--primary-color);
-    border-top: 1px inset whitesmoke;
-    border-right: 5px inset whitesmoke;
-    border-left: 5px inset whitesmoke;
-    border-radius: 20px;
-}
-
-body table tr td {
-    text-align: center;
-    padding:5px;
-    background-color: rgba(73, 73, 75, 0.9);
-    max-width: 400px;
-    color: hsla(97, 13%, 80%, 1);
-    border-radius: 20px;
-}
 
 #hometown {
     position: fixed;
@@ -439,7 +428,7 @@ body h1 {
 
         footer {
             position: relative;
-            bottom: 0;
+            top: 40%;
             left: 30vw;
             right: 30vw;
             max-height: 20%;
