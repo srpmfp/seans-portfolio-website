@@ -240,7 +240,8 @@ form button:hover, button:focus {
 }
 
  .main-grid{
-    margin-left: 15vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
  }
 
 .grid_item {
@@ -248,6 +249,8 @@ form button:hover, button:focus {
     width: auto;
     margin: 0 auto;
     color: white;
+    margin:0 auto;
+
     & a {
         color: var(--primary-color)
     }

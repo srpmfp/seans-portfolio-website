@@ -299,7 +299,8 @@ button:focus {
 }
 
 .main-grid {
-    margin-left: 15vw;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 .grid_item {
@@ -307,6 +308,7 @@ button:focus {
     width: auto;
     margin: 0 auto;
     color: white;
+    margin: 0 auto;
 
     & a {
         color: hsla(97, 13%, 80%, 1)
@@ -565,6 +567,8 @@ body h1 {
         top: 40%;
         left: 30vw;
         right: 30vw;
+        max-height: -webkit-fit-content;
+        max-height: -moz-fit-content;
         max-height: fit-content;
         width: 50vw;
     }
