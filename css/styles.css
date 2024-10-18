@@ -228,15 +228,42 @@ form button:hover, button:focus {
 .page-footer {
     clear: both;
     margin:auto 0;
+    position:fixed;
+    bottom:-10%;
+    left: 40%;
+    right: auto;
     display: flex;
     text-align: center;
     flex-direction: column;
     background-color: var(--active-color);
     color: white;
     border-radius: 15px;
+    transition-property: bottom;
+    transition-duration: 1000ms;
+    transition-delay: 500ms;
+    transition-timing-function: ease-in-out;
+    animation-name: bounce;
+    animation-duration: 3000ms;
+    animation-delay: 3000ms;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
         & h2{
             margin:0
         }
+        & :hover{
+            bottom:0;
+            animation-play-state: paused;
+        }   
+}
+    @keyframes bounce{
+    from{
+        bottom:-10%;
+    }
+    to{
+        bottom:-5%;
+    }
+
 }
 
  .main-grid{
@@ -429,20 +456,23 @@ body h1 {
         z-index: -1;
     }
 
-        footer {
-            position: relative;
-            top: 40%;
-            left: 30vw;
-            right: 30vw;
+       .page-footer {
+            position: fixed;
+            bottom:-10%;
+            left: 25vw;
+            right: 25vw;
             max-height: fit-content;
-            width: 50vw; }
+            width: 50vw;
+        }
         }
 
 @media all and (max-width:390px) {
     body main h1 {
         font-size: 1em;
     }
-
+    main{
+        overflow-y: scroll;
+    }
     body header nav ul {
         padding: 0;
         margin: 0;
