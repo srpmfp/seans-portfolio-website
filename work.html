@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <link
       rel="icon"
-      href="./img/a-black-and-white-image-of-a-moth-entering-into-fl.ico" >
+      href="./img/mfp_logo.ico" >
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
@@ -28,22 +28,28 @@
         src="./img/mfp_logo2.svg"
         alt="Sean Peters Headshot"
         class="profile-img" >
-      <nav>
-        <ul role="menubar">
-          <li>
-            <a href="./index.html" role="menuitem"> Home</a>
-          </li>
-          <li>
-            <a href="./about.html" role="menuitem"> About Me</a>
-          </li>
-          <li>
-            <a href="./contact.html" role="menuitem"> Contact</a>
-          </li>
-          <li>
-            <a href="./work.html" role="menuitem"> Work</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="dropMenu">
+        <button class="menuButton">
+           <img src="./img/menu.svg"  alt="menu icon" >
+        </button>
+        <nav class="menubar">
+                   <ul role="menubar" class="menuList">
+            
+            <li class="menuitem">
+              <a href="./index.html" role="menuitem" > Home</a>
+            </li>
+            <li class="menuitem">
+              <a class="menuA" href="./about.html" role="menuitem" > About Me</a>
+            </li>
+            <li class="menuitem">
+              <a href="./contact.html" role="menuitem"> Contact</a>
+            </li>
+            <li class="menuitem">
+              <a href="./work.html" role="menuitem"> Work</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
     <main>
       <h1>Check out my work</h1>
@@ -56,8 +62,10 @@
               <a
                 href="https://github.com/srpmfp/seans-portfolio-website"
                 target="_blank">
-                Git Repo for this Portfolio Page</a
-              ><br ><br >
+                Git Repo for this Portfolio Page</a>
+              <br >
+              <p> A reference to this page's source code, notes, and changes. </p>
+              <br >
               <br >
             </div>
           </div>
