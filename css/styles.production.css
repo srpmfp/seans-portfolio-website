@@ -415,6 +415,10 @@ button:focus {
     clear: both;
     margin: auto 0;
     position: fixed;
+    -webkit-box-shadow: 5px 5px rgba(0, 0, 0, 0.139);
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.139);
+    border-style: inset;
+    border-color: whitesmoke;
     bottom: -10%;
     left: 40%;
     right: auto;
@@ -428,7 +432,8 @@ button:focus {
     flex-direction: column;
     background-color: hsla(186, 21%, 26%, 1);
     color: white;
-    border-radius: 15px;
+    border-radius: 10px;
+    border-color: hsla(97, 13%, 80%, 1);
     -webkit-transition-property: bottom;
     -o-transition-property: bottom;
     transition-property: bottom;
@@ -523,6 +528,7 @@ footer:hover {
 
 .grid_item {
     display: inline-block;
+    position: relative;
     width: auto;
     margin: 0 auto;
     color: white;
@@ -572,8 +578,8 @@ footer:hover {
     .grid_item {
 
         background-color: hsla(186, 21%, 26%, 1);
-        max-width: 350px;
-        max-height: 500px;
+        max-width: 300px;
+        max-height: 300px;
         min-height: 300px;
         grid-column: auto/auto;
         grid-row: auto/auto;

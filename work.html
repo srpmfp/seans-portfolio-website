@@ -18,6 +18,10 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet" >
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/pokedex.styles.production.css">
 
     <link rel="stylesheet" href="./css/styles.production.css" >
     <title>Sean's Contact Page</title>
@@ -55,7 +59,7 @@
       <h1>Check out my work</h1>
       <div class="main-grid">
         <div class="work-grid">
-          <div class="grid_item">
+          <div class="grid_item" >
             <div>
               1
               <br >
@@ -69,15 +73,24 @@
               <br >
             </div>
           </div>
-          <div class="grid_item">
-            2
-            <br >
-            This is a sample of my work<br >
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi,
-            voluptatibus quaerat voluptatem asperiores earum fuga vero impedit!
-            Beatae adipisci accusantium aut! Corrupti ipsum debitis similique
-            laboriosam sapiente obcaecati impedit. Quae.<br >
-            <br >
+          <div class="grid_item" id="pokedexGrid">
+            <div id="background" class="is-not-visible"></div>
+        <!-- display selected pokemon in modal -->
+        <div id="modal-container" class="is-not-visible">
+        <div id="modal"> </div>
+        </div>
+        <!-- Pokemon List container -->
+        <div class="pokedex">
+            
+            <h2 class="pokedexTitle">Pokedex</h2>
+        <!-- pokemon List -->
+            
+                <ul class="pokemonSelect"></ul>
+                
+        <!-- pokemon -->
+            
+            
+        </div>
           </div>
           <div class="grid_item">
             3<br >
@@ -114,5 +127,6 @@
         </a>
       </div>
     </footer>
+    <script src="js/scripts.js"></script> 
   </body>
 </html>

@@ -126,10 +126,11 @@
         opacity: 1;
         animation-name: dropList;
         padding: .2rem;
+        text-decoration: none;
         color: var(--primary-color);
         animation-duration: 150ms;
         animation-timing-function: ease-out;
-
+        animation-direction: alternate;
 
     }
 
@@ -325,6 +326,9 @@
         clear: both;
         margin: auto 0;
         position: fixed;
+        box-shadow: 5px 5px rgba(0, 0, 0, 0.139);
+        border-style: inset;
+        border-color: whitesmoke;
         bottom: -10%;
         left: 40%;
         right: auto;
@@ -333,7 +337,8 @@
         flex-direction: column;
         background-color: var(--active-color);
         color: white;
-        border-radius: 15px;
+        border-radius: var(--border-radius);
+        border-color: var(--primary-color);
         transition-property: bottom;
         transition-duration: 1000ms;
         transition-delay: 500ms;
@@ -388,6 +393,7 @@
 
     .grid_item {
         display: inline-block;
+        position: relative;
         width: auto;
         margin: 0 auto;
         color: white;
@@ -431,8 +437,8 @@
         .grid_item {
 
             background-color: var(--active-color);
-            max-width: 350px;
-            max-height: 500px;
+            max-width: 300px;
+            max-height: 300px;
             min-height: 300px;
             grid-column: auto/auto;
             grid-row: auto/auto;
