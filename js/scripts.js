@@ -229,3 +229,4 @@ pokemonRepository.loadList().then(function (pokemon) {
 
     })
 });
+

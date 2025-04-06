@@ -16,6 +16,13 @@
 
     }
 
+    .meetUpBtn {
+        background-color: hsla(210, 72%, 69%, 0.642);
+        width: min-content;
+        padding: 2px;
+        margin: auto;
+    }
+
     * {
         box-sizing: border-box;
         margin: 0;
@@ -313,6 +320,8 @@
 
     }
 
+
+
     #contactlinks {
         text-align: center;
     }
@@ -393,6 +402,7 @@
 
     .grid_item {
         display: inline-block;
+        align-self: start;
         position: relative;
         width: auto;
         margin: 0 auto;
@@ -402,13 +412,23 @@
         & a {
             color: var(--primary-color)
         }
+
     }
 
+    #pokedexGrid:active::after {
+        content: 'Project utilizing API calls, asynchronus functions, and Modals';
+
+    }
 
     @supports(display: grid) {
         @media all and (max-width: 275px) {
 
             .work-grid {
+                display: grid;
+                justify-items: center;
+                align-items: start;
+                grid-template-columns: 1fr;
+                grid-row-gap: 2vw;
                 max-width: fit-content;
                 grid-template-columns: 1fr;
                 grid-column-start: auto;
@@ -421,6 +441,7 @@
 
             .work-grid {
                 grid-template-columns: 1fr 1fr;
+                align-items: start;
             }
 
         }
@@ -428,7 +449,9 @@
         @media all and (max-width: 600px) {
 
             .work-grid {
-                grid-template-columns: 1fr 1fr 1fr 1fr;
+
+                grid-template-columns: 1fr 1fr 1fr;
+                align-items: start;
             }
 
 
@@ -439,7 +462,7 @@
             background-color: var(--active-color);
             max-width: 300px;
             max-height: 300px;
-            min-height: 300px;
+            min-height: fit-content;
             grid-column: auto/auto;
             grid-row: auto/auto;
             padding: 5px;
@@ -450,6 +473,14 @@
             transition-timing-function: ease-in-out;
             transition-delay: 150ms;
         }
+
+        @media all and (min-width:800px) {
+            .work-grid {
+                align-items: start;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
     }
 
     .grid_item:hover {
@@ -458,7 +489,7 @@
         animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
         animation-iteration-count: infinite;
         animation-direction: alternate;
-        box-shadow: inset;
+
         transform: scale(1.01);
     }
 
@@ -508,6 +539,7 @@
     }
 
     @media all and (max-width: 950px) {
+
 
         body header {
             font-size: 1em;

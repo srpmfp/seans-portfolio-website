@@ -5,6 +5,33 @@
 * Browsers: last 4 version
 */
 
+:root {
+    --primary-color: hsla(97, 13%, 80%, 1);
+    --active-color: hsla(186, 21%, 26%, 1);
+    --active-color-half: hsla(186, 21%, 26%, 1);
+    --form-color: hsla(210, 3%, 15%, 1);
+    --font-dark: hsla(210, 3%, 15%, 1);
+    --span: hsla(201, 20%, 23%, 1);
+    --form-th: hsla(0, 0%, 100%, .8);
+    --font-size: 400;
+    --font-family: "coming soon";
+    --border-radius: 10px;
+    --border-circle: 50%;
+    --view-height: 100vh;
+    --x-margin: 0 auto;
+    --y-margin: auto 0;
+
+}
+
+.meetUpBtn {
+    background-color: hsla(210, 72%, 69%, 0.642);
+    width: -webkit-min-content;
+    width: -moz-min-content;
+    width: min-content;
+    padding: 2px;
+    margin: auto;
+}
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -15,9 +42,9 @@
 body {
     margin: 0;
     font-family: "noto sans";
-    font-weight: 400;
-    background-color: hsla(97, 13%, 80%, 1);
-    height: 100vh;
+    font-weight: var(--font-size);
+    background-color: var(--primary-color);
+    height: var(--view-height);
     overflow-x: hidden;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -32,19 +59,19 @@ body {
     line-height: 1.5;
 
     & h1 {
-        font-family: "coming soon";
+        font-family: var(--font-family);
     }
 
     & table {
         text-align: left;
-        border-radius: 10px;
+        border-radius: var(--border-radius);
         z-index: 1;
 
         & th {
-            font-family: "coming soon";
+            font-family: var(--font-family);
             justify-items: start;
             text-align: center;
-            background-color: hsla(97, 13%, 80%, 1);
+            background-color: var(--primary-color);
             border-top: 1px inset whitesmoke;
             border-right: 5px inset whitesmoke;
             border-left: 5px inset whitesmoke;
@@ -127,7 +154,7 @@ header {
     opacity: 1;
     -webkit-animation-name: dropList;
     animation-name: dropList;
-    background-color: hsla(210, 3%, 15%, 1);
+    background-color: var(--form-color);
     margin: 2px 0;
     text-align: center;
     -webkit-animation-duration: 150ms;
@@ -143,7 +170,7 @@ header {
     animation-name: dropList;
     padding: .2rem;
     text-decoration: none;
-    color: hsla(97, 13%, 80%, 1);
+    color: var(--primary-color);
     -webkit-animation-duration: 150ms;
     animation-duration: 150ms;
     -webkit-animation-timing-function: ease-out;
@@ -235,8 +262,8 @@ main {
 }
 
 .text-hello span {
-    background-color: hsla(201, 20%, 23%, 1);
-    color: hsla(97, 13%, 80%, 1);
+    background-color: var(--span);
+    color: var(--primary-color);
     margin: 0 5px;
     padding: 0 5px;
 }
@@ -245,7 +272,7 @@ main {
     float: left;
     width: inherit;
     margin-right: 40px;
-    border-radius: 50%;
+    border-radius: var(--border-circle);
     border: 3px inset hsla(133, 18%, 59%, 1)
 }
 
@@ -317,7 +344,7 @@ main {
 
 
 header #menuitem:visited {
-    color: hsla(210, 3%, 15%, 1)
+    color: var(--form-color)
 }
 
 
@@ -369,7 +396,7 @@ form h1 {
     border-radius: 10px;
     padding-bottom: 20px;
     background-color: hsla(210, 3%, 15%, 1);
-    color: hsla(97, 13%, 80%, 1);
+    color: var(--primary-color);
 }
 
 form input,
@@ -384,23 +411,20 @@ form textarea {
 }
 
 form button {
-    font-family: "coming soon";
+    font-family: var(--font-family);
     font-size: 20px;
     font-stretch: expanded;
     border-radius: 10px 10px 10px 10px;
 }
 
-form button:hover {
-    background-color: hsla(97, 13%, 80%, 1);
-    cursor: pointer;
-
-}
-
+form button:hover,
 button:focus {
-    background-color: hsla(97, 13%, 80%, 1);
+    background-color: var(--primary-color);
     cursor: pointer;
 
 }
+
+
 
 #contactlinks {
     text-align: center;
@@ -430,10 +454,10 @@ button:focus {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    background-color: hsla(186, 21%, 26%, 1);
+    background-color: var(--active-color);
     color: white;
-    border-radius: 10px;
-    border-color: hsla(97, 13%, 80%, 1);
+    border-radius: var(--border-radius);
+    border-color: var(--primary-color);
     -webkit-transition-property: bottom;
     -o-transition-property: bottom;
     transition-property: bottom;
@@ -528,6 +552,9 @@ footer:hover {
 
 .grid_item {
     display: inline-block;
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
     position: relative;
     width: auto;
     margin: 0 auto;
@@ -535,15 +562,29 @@ footer:hover {
     margin: 0 auto;
 
     & a {
-        color: hsla(97, 13%, 80%, 1)
+        color: var(--primary-color)
     }
+
 }
 
+#pokedexGrid:active::after {
+    content: 'Project utilizing API calls, asynchronus functions, and Modals';
+
+}
 
 @supports(display: grid) {
     @media all and (max-width: 275px) {
 
         .work-grid {
+            display: -ms-grid;
+            display: grid;
+            justify-items: center;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
+            -ms-grid-columns: 1fr;
+            grid-template-columns: 1fr;
+            grid-row-gap: 2vw;
             max-width: -webkit-fit-content;
             max-width: -moz-fit-content;
             max-width: fit-content;
@@ -561,6 +602,9 @@ footer:hover {
         .work-grid {
             -ms-grid-columns: 1fr 1fr;
             grid-template-columns: 1fr 1fr;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
         }
 
     }
@@ -568,8 +612,13 @@ footer:hover {
     @media all and (max-width: 600px) {
 
         .work-grid {
-            -ms-grid-columns: 1fr 1fr 1fr 1fr;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
+
+            -ms-grid-columns: 1fr 1fr 1fr;
+
+            grid-template-columns: 1fr 1fr 1fr;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
         }
 
 
@@ -577,15 +626,17 @@ footer:hover {
 
     .grid_item {
 
-        background-color: hsla(186, 21%, 26%, 1);
+        background-color: var(--active-color);
         max-width: 300px;
         max-height: 300px;
-        min-height: 300px;
+        min-height: -webkit-fit-content;
+        min-height: -moz-fit-content;
+        min-height: fit-content;
         grid-column: auto/auto;
         grid-row: auto/auto;
         padding: 5px;
         overflow-y: hidden;
-        color: hsla(97, 13%, 80%, 1);
+        color: var(--primary-color);
         -webkit-transition-property: -webkit-box-shadow, -webkit-transform;
         transition-property: -webkit-box-shadow, -webkit-transform;
         -o-transition-property: box-shadow, transform;
@@ -601,6 +652,18 @@ footer:hover {
         -o-transition-delay: 150ms;
         transition-delay: 150ms;
     }
+
+    @media all and (min-width:800px) {
+        .work-grid {
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
+            display: -ms-grid;
+            display: grid;
+            -ms-grid-columns: 1fr 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+    }
 }
 
 .grid_item:hover {
@@ -614,10 +677,11 @@ footer:hover {
     animation-iteration-count: infinite;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-    -webkit-box-shadow: inset;
-    box-shadow: inset;
+
     -webkit-transform: scale(1.01);
+
     -ms-transform: scale(1.01);
+
     transform: scale(1.01);
 }
 
@@ -709,6 +773,7 @@ body h1 {
 }
 
 @media all and (max-width: 950px) {
+
 
     body header {
         font-size: 1em;

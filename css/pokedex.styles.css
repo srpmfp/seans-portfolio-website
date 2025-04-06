@@ -25,6 +25,7 @@ main {
     border: 2px solid black;
     width: fit-content;
     text-align: center;
+
     background-image: linear-gradient(var(--background2), var(--background1), var(--background1));
 
 
@@ -48,6 +49,7 @@ main {
 .pokemonSelect {
     display: flex;
     flex-direction: column;
+        scrollbar-width: none;
 
     flex-wrap: wrap;
     width: 100%;
@@ -74,6 +76,26 @@ main {
     margin: 10px
 }
 
+.pokemon:first-child {
+    border-top-color: #00000029;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-top-style: ridge;
+}
+
+.pokemon:last-child {
+    border-bottom: 2px ridge #00000029;
+    border-top-style: ridge;
+}
+
+.pokemon {
+    background-color: #00000029;
+
+    border-left: 2px ridge #00000029;
+    border-right: 2px inset #00000029;
+
+}
+
 .pokeButton {
 
     background-color: rgba(55, 196, 116, 0.7);
@@ -88,7 +110,7 @@ main {
     border: 2px inset linear-gradient(left white, rgba(0, 0, 0, 0.283));
     min-width: 5em;
     min-height: 2em;
-    box-shadow: 2px 5px black;
+    box-shadow: 2px 5px rgba(0, 0, 0, 0.404);
 
 }
 

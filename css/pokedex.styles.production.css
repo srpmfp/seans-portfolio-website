@@ -5,6 +5,11 @@
 * Browsers: last 4 version
 */
 
+:root {
+    --background1: rgba(60, 90, 238, 0.571);
+    --background2: rgb(239, 235, 36.6);
+}
+
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
@@ -35,9 +40,12 @@ main {
     width: -moz-fit-content;
     width: fit-content;
     text-align: center;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(239, 235, 36.6)), color-stop(rgba(60, 90, 238, 0.571)), to(rgba(60, 90, 238, 0.571)));
-    background-image: -o-linear-gradient(rgb(239, 235, 36.6), rgba(60, 90, 238, 0.571), rgba(60, 90, 238, 0.571));
-    background-image: linear-gradient(rgb(239, 235, 36.6), rgba(60, 90, 238, 0.571), rgba(60, 90, 238, 0.571));
+
+    background-image: -webkit-gradient(linear, left top, left bottom, from(var(--background2)), color-stop(var(--background1)), to(var(--background1)));
+
+    background-image: -o-linear-gradient(var(--background2), var(--background1), var(--background1));
+
+    background-image: linear-gradient(var(--background2), var(--background1), var(--background1));
 
 
     & .pokedexTitle {
@@ -68,6 +76,7 @@ main {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    scrollbar-width: none;
 
     -ms-flex-wrap: wrap;
 
@@ -131,7 +140,7 @@ main {
     text-transform: initial;
     margin: .2em;
     border-radius: 20px;
-    border: 2px inset linear-gradient(left white, rgba(0, 0, 0, 0.283));
+    border: 2px inset linear-gradient(to left white, rgba(0, 0, 0, 0.283));
     min-width: 5em;
     min-height: 2em;
     -webkit-box-shadow: 2px 5px rgba(0, 0, 0, 0.404);
