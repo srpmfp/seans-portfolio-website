@@ -1,0 +1,72 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+* {
+    scrollbar-width: none;
+}
+
+#carouselExampleControls {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+#workRef {
+    margin: auto 0;
+}
+
+.headerClass {
+    background: #8BE8CB;
+    -webkit-box-shadow: inset 0 0 1ch 0 #303633;
+    box-shadow: inset 0 0 1ch 0 #303633;
+}
+
+.directBtn {
+    background-color: #303633;
+    height: 10vh;
+
+    padding: 1%;
+}
+
+.logoImg {
+    width: 5%;
+}
+
+header {
+    z-index: 999;
+}
+
+#meetUp {
+    font-size: 1em;
+
+}
+
+#meetUp>img {
+    background-size: contain;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%
+}
+
+#meetUp>table {
+    padding: .5em;
+
+}

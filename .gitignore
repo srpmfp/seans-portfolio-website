@@ -7,4 +7,5 @@ contact.html
 css/*.css
 
 !css/index.production.css
+!css/workpage.production.css
 
