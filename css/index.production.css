@@ -1,0 +1,248 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+
+}
+
+.coming-soon-regular {
+    font-family: "Coming Soon", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root {
+    --font-family: "coming soon", sans-serif;
+}
+
+body {
+    width: 100vw;
+    scrollbar-width: none;
+
+}
+
+.mainContainer {
+    scrollbar-width: none;
+    -ms-scroll-snap-type: y proximity;
+    scroll-snap-type: y proximity;
+    scroll-padding: 1em;
+    height: 100vh;
+    overflow: scroll;
+    z-index: -100;
+    /* Full viewport height for snapping */
+}
+
+.logoImg {
+    width: 5%;
+}
+
+#skillTree {
+    background-color: #303633;
+}
+
+.navDir {
+    position: fixed;
+    left: 1%;
+    background-color: rgba(255, 255, 255, 0.477);
+    border-radius: 1em;
+    bottom: 50%;
+
+    font-size: x-small;
+    width: 10px;
+    z-index: 1000;
+}
+
+.skillItem {
+    scale: .5;
+
+}
+
+#instDes,
+#effCom,
+#mgrCol {
+    -webkit-box-shadow: inset 0 0 3ch 0 rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 3ch 0 rgba(0, 0, 0, 0.5);
+
+}
+
+
+
+.instDes {
+    height: 100vh;
+    z-index: 1;
+
+    scroll-snap-align: start;
+    scroll-margin: .2em;
+    text-align: center;
+    width: 0px;
+    opacity: 0;
+    -webkit-transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+    -o-transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+    transition: opacity 0.7s ease-in-out, visibility 0.7s ease-in-out;
+
+
+}
+
+.instDes>div {
+    background-color: rgb(255, 255, 255);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    border-radius: 1em;
+
+    z-index: 1000;
+
+    && span {
+        font-size: 1em;
+        font-weight: 700;
+    }
+}
+
+.bg-row-1 {
+    background-image: url('../img/Sean_Headshot.jpg');
+    /* Replace with your image path */
+    background-size: cover;
+
+    -webkit-clip-path: polygon(100% 16%, 100% 38%, 100% 100%, 0 77%, 0% 38%);
+
+    clip-path: polygon(100% 16%, 100% 38%, 100% 100%, 0 77%, 0% 38%);
+    /* Ensure the image covers the entire row */
+    background-position: center;
+    background-attachment: fixed;
+    /* Creates a parallax effect */
+    height: 100vh;
+    /* Full viewport height */
+    position: relative;
+    z-index: -1;
+    /* Ensure the background stays behind content */
+}
+
+.headerClass {
+    background: #8BE8CB;
+}
+
+.bg-row-2 {
+    background-image: url('../img/Sean_Headshot.jpg');
+    /* Replace with your image path */
+    -webkit-clip-path: polygon(0 18%, 100% 35%, 100% 73%, 0 100%, 0 51%);
+    clip-path: polygon(0 18%, 100% 35%, 100% 73%, 0 100%, 0 51%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-clip: content-box;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+}
+
+.bg-row-3 {
+    background-image: url('../img/Sean_Headshot.jpg');
+    /* Replace with your image path */
+    -webkit-clip-path: polygon(100% 16%, 100% 38%, 100% 100%, 0 77%, 0% 38%);
+    clip-path: polygon(100% 16%, 100% 38%, 100% 100%, 0 77%, 0% 38%);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    z-index: -1;
+}
+
+
+
+.instDes>p {
+    font-size: 1.5em;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 5em;
+    -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, scale 1.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, scale 1.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out, scale 1.5s ease-in-out;
+
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-200px) scale(0.5) translateY(-200px);
+        transform: translateX(-200px) scale(0.5) translateY(-200px);
+    }
+
+    50% {
+        opacity: 0.5;
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0) translateY(0) scale(1);
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-200px) scale(0.5) translateY(-200px);
+        transform: translateX(-200px) scale(0.5) translateY(-200px);
+    }
+
+    50% {
+        opacity: 0.5;
+        -webkit-transform: scale(0.75);
+        transform: scale(0.75);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0) translateY(0) scale(1);
+        transform: translateX(0) translateY(0) scale(1);
+    }
+}
+
+.instDes.visible {
+    scale: 1;
+    visibility: visible;
+    opacity: 1;
+    padding: 0 11em;
+    -webkit-animation-name: fadeIn;
+    animation-name: fadeIn;
+    -webkit-animation-duration: 500ms;
+    animation-duration: 500ms;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+
+}
+
+
+
+.effCom {
+    scroll-snap-align: start;
+    opacity: 0;
+    -webkit-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.effCom.visible {
+
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+.section1 {
+    height: 100vh;
+}

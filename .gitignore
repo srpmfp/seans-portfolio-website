@@ -1,1 +1,10 @@
 .prettierignore
+index1.html
+work.html
+about.html
+contact.html
+
+css/*.css
+
+!css/index.production.css
+

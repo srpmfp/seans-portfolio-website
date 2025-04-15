@@ -1,80 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link rel="icon" href="./img/mfp_logo.ico" >
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-      integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer" >
-    <link
-      href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap"
-      rel="stylesheet" >
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet" >
-    <link rel="stylesheet" href="./css/styles.production.css" >
-    <title>Sean Peters Portfolio Site</title>
-  </head>
+    <head>
+        <link rel="stylesheet" href="./css/index.production.css">
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css"
+            integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+            crossorigin="anonymous"
+        >
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <header class="headerClass position-fixed d-flex flex-row justify-content-center text-center w-100">
+            <img src="./img/mfp_logo2.svg" alt="logo" class="logoImg img-fluid">
+            <nav class="row m-auto">
+                <div class="col"><a class="btn btn-primary active" href="./index.html"> Home</a></div>
+                <!-- <div class="col"><a class="btn btn-secondary " href="./homePage.html"> About</a></div> -->
+                <div class="col"><a class="btn btn-secondary" href="./workPage.html"> Work</a></div>
+            </nav>
+        </header>
+        <div id="skillTree" class="list-group  position-absolute navDir">
+            <a class="m-1 skillItem rounded list-group-item list-group-item-action list-group-item-secondary" href="#instDes"></a>
+            <a class="m-1 skillItem rounded list-group-item list-group-item-action list-group-item-secondary" href="#effCom"></a>
+            <a class="m-1 skillItem rounded list-group-item list-group-item-action list-group-item-secondary" href="#mgrCol"></a>
+            <a class="m-1 skillItem rounded list-group-item list-group-item-action list-group-item-secondary" href="#powerSuite"></a>
+        </div>
+        <div
+            data-spy="scroll"
+            data-target="#skillTree"
+            data-offset="0"
+            class="mainContainer p-0 m-0 container-fluid"
+        >
+            <main class="container-fluid">
+                <div id="instDes" class="row justify-content-center bg-row-1 ">
+                    <div class="col"></div>
+                    <div class="col-md-auto m-auto ">
+                        <div class="container d-flex flex-column justify-content-center m-auto instDes">
+                            <div class="p-1 align-self-center">
+                                <h2>
+                                   <span> Learning and Development</span>
+                                </h2>
+                                <p>
+                                    Developed <b>blended learning strategies</b> to enable a <b>dynamic onboarding
+experience</b> to increase retention of new hires. This required the <u>creation,
+maintenance, and oversite</u> of a Teams/SharePoint site that
+functioned as a repository for managers and employees to access key information for their jobs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="effCom" class="row justify-content-end bg-row-2">
+                    <div class="col-md-auto m-auto ">
+                        <div class="container d-flex flex-column justify-content-center m-auto instDes">
+                            <div class="p-1 align-self-center">
+                                <h2>
+                                    Audio/Video
+                                </h2>
+                                <p>
+                                    Recorded, edited, and uploaded videos to give step by step instructions
+on how to utilize technology, management techniques, and orthopedic
+assessments as both designer and subject matter expert.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col"></div>
+                    </div>
+                    <div id="mgrCol" class="row justify-content-end bg-row-3">
+                        <div class="col">1</div>
+                        <div class="col-md-auto m-auto ">
+                            <div class="container d-flex flex-column justify-content-center m-auto instDes">
+                                <div class="p-1 align-self-center">
+                                    <h2>
+                                        instructional design
+                                    </h2>
+                                    <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, nisi nobis delectus provident totam debitis itaque mollitia rerum eius, deleniti reprehenderit accusantium distinctio praesentium animi voluptatum ad quibusdam labore in?</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div id="powerSuite" class="col-md-auto m-auto ">
+                            <div class="container d-flex flex-column justify-content-center m-auto instDes">
+                                <h2>
+                                    instructional design
+                                </h2>
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, nisi nobis delectus provident totam debitis itaque mollitia rerum eius, deleniti reprehenderit accusantium distinctio praesentium animi voluptatum ad quibusdam labore in?</p>
+                            </div>
+                        </div>
 
-  <body>
-    <header>
-      <img
-        src="./img/mfp_logo2.svg"
-        alt="Logo"
-        class="profile-img" >
-        
-      <div class="dropMenu">
-        <button class="menuButton">
-           <img src="./img/menu.svg"  alt="menu icon" >
-        </button>
-        <nav class="menubar">
-                   <ul role="menubar" class="menuList">
-            
-            <li class="menuitem">
-              <a href="./index.html" role="menuitem" > Home</a>
-            </li>
-            <li class="menuitem">
-              <a class="menuA" href="./about.html" role="menuitem" > About Me</a>
-            </li>
-            <li class="menuitem">
-              <a href="./contact.html" role="menuitem"> Contact</a>
-            </li>
-            <li class="menuitem">
-              <a href="./work.html" role="menuitem"> Work</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <main>
-      <div class="index-contents">
-        <div class="profile">
-          <img
-            src="./img/sean_generated.png"
-            class="portrait-main"
-            alt="Ai generated portrait" >
-        </div>
-        <div class="text-hello">
-          <h1>Hello world</h1>
-          <p>My name is Sean Peters</p>
-          <p>I am a <span>&lt; web &gt; </span> developer from Massachusetts</p>
-        </div>
-      </div>
-    </main>
-    <footer class="page-footer">
-      <h2>Find me on</h2>
-      <div>
-        <a href="">
-          <img src="./img/xicon.svg" alt="X Logo" class="social-icn" >
-        </a>
-        <a href="">
-          <img src="./img/fbicon.svg" alt="Facebook Logo" class="social-icn" >
-        </a>
-      </div>
-    </footer>
-  </body>
-</html>
+                    </div>
+                    <div class="row justify-content-end">
+                        <div class="col-md-auto m-auto ">
+                            <div class="container d-flex flex-column justify-content-center m-auto instDes">
+                                <h2>
+                                    instructional design
+                                </h2>
+                                <p> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quos, nisi nobis delectus provident totam debitis itaque mollitia rerum eius, deleniti reprehenderit accusantium distinctio praesentium animi voluptatum ad quibusdam labore in?</p>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+            </div>
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+            <script src="./js/homePage.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        </body>
+    </html>
