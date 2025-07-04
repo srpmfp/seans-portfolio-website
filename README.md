@@ -12,7 +12,7 @@
 ### Future state
 
 -  Shift whole page to react page
-  -  Currently under development 
+      -  Currently in process
 -  enable users to see each individual project or a page with all.
 -  Contact form
 -  Local weather and time API integration
