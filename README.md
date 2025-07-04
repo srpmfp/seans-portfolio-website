@@ -2,11 +2,11 @@
 
 ### Technologies used
 
--Vanilla JS
--CSS
--Semantic HTML
--Godaddy web hosting
--polyfill
+- Vanilla JS
+- CSS
+- Semantic HTML
+- Godaddy web hosting
+- polyfill
 
 
 ### Future state
